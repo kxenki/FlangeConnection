@@ -331,6 +331,16 @@ namespace FlangeConnection
             e.Graphics.DrawLines(blackPen, points.ToArray());
         }
 
-       
+        private void buExit_Click(object sender, EventArgs e)
+        {
+            // закрыть окно
+            Close();
+        }
+
+        private void buWrap_Click(object sender, EventArgs e)
+        {
+            // свернуть окно
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

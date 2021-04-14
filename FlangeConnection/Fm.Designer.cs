@@ -60,7 +60,6 @@ namespace FlangeConnection
             // picBox1
             // 
             this.picBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.picBox1.Image = global::FlangeConnection.Properties.Resources.pic1;
             this.picBox1.Location = new System.Drawing.Point(10, 9);
             this.picBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBox1.Name = "picBox1";
@@ -72,7 +71,6 @@ namespace FlangeConnection
             // picBox2
             // 
             this.picBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.picBox2.Image = global::FlangeConnection.Properties.Resources.pic2;
             this.picBox2.Location = new System.Drawing.Point(10, 471);
             this.picBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBox2.Name = "picBox2";
@@ -84,7 +82,6 @@ namespace FlangeConnection
             // picBox3
             // 
             this.picBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.picBox3.Image = global::FlangeConnection.Properties.Resources.pic3;
             this.picBox3.Location = new System.Drawing.Point(10, 236);
             this.picBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBox3.Name = "picBox3";
@@ -315,7 +312,7 @@ namespace FlangeConnection
             this.Controls.Add(this.picBox1);
             this.MinimumSize = new System.Drawing.Size(1149, 554);
             this.Name = "Fm";
-            this.Text = "kmkkfmkmkfmkvm";
+            this.Text = "Flange Connections";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.picBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox2)).EndInit();

@@ -7,6 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.html;
+using iTextSharp.text.html.simpleparser;
+using System.IO;
+using System.Diagnostics;
 
 namespace FlangeConnection
 {
@@ -16,6 +22,7 @@ namespace FlangeConnection
         float n = 2; //степень графика
         float f = 0; //x+
         float c = 0; //y+
+        private System.Drawing.Image bitmap;
 
         public Fm()
         {
@@ -32,7 +39,100 @@ namespace FlangeConnection
             createSize();
             this.Resize += (s, e) => createSize();
 
+            tbPress.KeyPress += TbPress_KeyPress;
+            tbPress.TextChanged += TbPress_TextChanged;
+            tbToDegrees.KeyPress += TbToDegrees_KeyPress;
+            tbToDegrees.TextChanged += TbToDegrees_TextChanged;
+            tbFromDegrees.KeyPress += TbFromDegrees_KeyPress;
+            tbFromDegrees.TextChanged += TbFromDegrees_TextChanged;
 
+            bitmap = new Bitmap(picBoxPaint.Width, picBoxPaint.Height);
+            buReport.Click += BuReport_Click;
+        }
+
+
+        private void BuReport_Click(object sender, EventArgs e)
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            var enc1252 = Encoding.GetEncoding(1252);
+
+            string ttf = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "ARIAL.TTF");
+            var baseFont = BaseFont.CreateFont(ttf, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            var font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
+            var fontParag = new iTextSharp.text.Font(baseFont, 20);
+            var fontTitle = new iTextSharp.text.Font(baseFont, 24);
+
+            Document doc = new Document(PageSize.A4, 10f, 10f, 100f, 0f);
+
+            string pdfFilePath = @"D:/";
+            string fullPdfFilePath = pdfFilePath + "MyDocument.pdf";
+
+            var fs = new FileStream(fullPdfFilePath, FileMode.Create);
+
+            doc.NewPage();
+            var writer = PdfWriter.GetInstance(doc, fs);
+
+            doc.Open();
+            doc.NewPage();
+
+            using (var stream = new FileStream("Test.pdf", FileMode.Create))
+            {
+                PdfWriter.GetInstance(doc, stream);
+                doc.Open();
+
+                doc.Add(new Paragraph("Фланцевое соединение", fontTitle));
+                doc.Add(new Paragraph("Параметры:", fontParag));
+                doc.Add(new Paragraph($"Материал = {lbMaterial.SelectedItem}", font));
+                doc.Add(new Paragraph($"Давление = {tbPress.Text} [кгс/см^2]", font));
+                doc.Add(new Paragraph($"Температура = от {tbFromDegrees.Text} до {tbToDegrees.Text} [°C]", font));
+
+                doc.Close();
+            }
+
+            MessageBox.Show("Отчет сохранен на диске D");
+        }
+
+        private void TbFromDegrees_TextChanged(object sender, EventArgs e)
+        {
+            if (tbFromDegrees.Text == "" || tbFromDegrees.Text == "-" || Convert.ToInt32(tbFromDegrees.Text) < -270 || Convert.ToInt32(tbFromDegrees.Text) > 650)
+                tbFromDegrees.ForeColor = Color.Red;
+            else
+                tbFromDegrees.ForeColor = Color.Black;
+        }
+
+        private void TbToDegrees_TextChanged(object sender, EventArgs e)
+        {
+            if (tbToDegrees.Text == "" || tbToDegrees.Text == "-" || Convert.ToInt32(tbToDegrees.Text) < -270 || Convert.ToInt32(tbToDegrees.Text) > 650)
+                tbToDegrees.ForeColor = Color.Red;
+            else
+                tbToDegrees.ForeColor = Color.Black;
+        }
+
+        private void TbToDegrees_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != '-')
+                e.Handled = true;
+        }
+
+        private void TbPress_TextChanged(object sender, EventArgs e)
+        {
+            if (tbPress.Text != "" && Convert.ToDouble(tbPress.Text) > 250)
+                tbPress.ForeColor = Color.Red;
+            else
+                tbPress.ForeColor = Color.Black;
+        }
+
+        private void TbFromDegrees_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != '-')
+                e.Handled = true;
+        }
+
+
+        private void TbPress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && (e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != ',')
+                e.Handled = true;
         }
 
         private void createSize()

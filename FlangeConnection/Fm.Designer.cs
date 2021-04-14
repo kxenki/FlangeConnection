@@ -64,7 +64,7 @@ namespace FlangeConnection
             // 
             this.picBox1.BackColor = System.Drawing.SystemColors.Window;
             this.picBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox1.Location = new System.Drawing.Point(12, 45);
+            this.picBox1.Location = new System.Drawing.Point(12, 55);
             this.picBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBox1.Name = "picBox1";
             this.picBox1.Size = new System.Drawing.Size(350, 188);
@@ -76,7 +76,7 @@ namespace FlangeConnection
             // 
             this.picBox2.BackColor = System.Drawing.SystemColors.Window;
             this.picBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox2.Location = new System.Drawing.Point(12, 507);
+            this.picBox2.Location = new System.Drawing.Point(12, 517);
             this.picBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBox2.Name = "picBox2";
             this.picBox2.Size = new System.Drawing.Size(350, 188);
@@ -88,10 +88,10 @@ namespace FlangeConnection
             // 
             this.picBox3.BackColor = System.Drawing.SystemColors.Window;
             this.picBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox3.Location = new System.Drawing.Point(12, 272);
+            this.picBox3.Location = new System.Drawing.Point(12, 282);
             this.picBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBox3.Name = "picBox3";
-            this.picBox3.Size = new System.Drawing.Size(350, 188);
+            this.picBox3.Size = new System.Drawing.Size(350, 193);
             this.picBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox3.TabIndex = 2;
             this.picBox3.TabStop = false;
@@ -99,39 +99,40 @@ namespace FlangeConnection
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(14, 246);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(10, 250);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 15);
+            this.label1.Size = new System.Drawing.Size(360, 30);
             this.label1.TabIndex = 3;
             this.label1.Text = "Фланец с шейкой, приварной встык";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(15, 677);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 15);
+            this.label2.Size = new System.Drawing.Size(291, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = " Плоский приварной фланец";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(14, 479);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(5, 484);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 15);
+            this.label3.Size = new System.Drawing.Size(210, 30);
             this.label3.TabIndex = 5;
             this.label3.Text = " Свободные фланцы";
             // 
             // picBoxPaint
             // 
             this.picBoxPaint.BackColor = System.Drawing.SystemColors.Window;
-            this.picBoxPaint.Location = new System.Drawing.Point(684, 62);
+            this.picBoxPaint.Location = new System.Drawing.Point(792, 106);
             this.picBoxPaint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBoxPaint.Name = "picBoxPaint";
-            this.picBoxPaint.Size = new System.Drawing.Size(407, 296);
+            this.picBoxPaint.Size = new System.Drawing.Size(355, 369);
             this.picBoxPaint.TabIndex = 6;
             this.picBoxPaint.TabStop = false;
             this.picBoxPaint.Paint += new System.Windows.Forms.PaintEventHandler(this.picBox_Paint);
@@ -139,20 +140,20 @@ namespace FlangeConnection
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(695, 47);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(792, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 15);
+            this.label4.Size = new System.Drawing.Size(160, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "График чего-то";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(378, 73);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(376, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 15);
+            this.label5.Size = new System.Drawing.Size(141, 30);
             this.label5.TabIndex = 9;
             this.label5.Text = "Выбор среды";
             // 
@@ -160,28 +161,30 @@ namespace FlangeConnection
             // 
             this.panel.AutoScroll = true;
             this.panel.BackColor = System.Drawing.SystemColors.Window;
-            this.panel.Location = new System.Drawing.Point(376, 95);
+            this.panel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel.Location = new System.Drawing.Point(377, 106);
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(302, 137);
+            this.panel.Size = new System.Drawing.Size(297, 137);
             this.panel.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(378, 47);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(376, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 15);
+            this.label6.Size = new System.Drawing.Size(159, 37);
             this.label6.TabIndex = 11;
             this.label6.Text = "Параметры";
             // 
             // lbMaterial
             // 
             this.lbMaterial.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbMaterial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbMaterial.FormattingEnabled = true;
             this.lbMaterial.HorizontalScrollbar = true;
-            this.lbMaterial.ItemHeight = 15;
+            this.lbMaterial.ItemHeight = 21;
             this.lbMaterial.Items.AddRange(new object[] {
             "Серый чугун СЧ15 ",
             "Серый чугун СЧ20",
@@ -222,44 +225,44 @@ namespace FlangeConnection
             "Сталь коррозионно-стойкая10Х17Н13М3Т",
             "Сталь коррозионно-стойкая 10Х17Н13М2Т",
             "Сталь коррозионно-стойкая 07Х20Н25М3Д2ТЛ(ЭИ 943Л)"});
-            this.lbMaterial.Location = new System.Drawing.Point(377, 291);
+            this.lbMaterial.Location = new System.Drawing.Point(381, 282);
             this.lbMaterial.Name = "lbMaterial";
-            this.lbMaterial.Size = new System.Drawing.Size(301, 169);
+            this.lbMaterial.Size = new System.Drawing.Size(405, 193);
             this.lbMaterial.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(379, 274);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(381, 250);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 15);
+            this.label7.Size = new System.Drawing.Size(109, 30);
             this.label7.TabIndex = 9;
             this.label7.Text = "Материал";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(381, 491);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(201, 15);
+            this.label8.Size = new System.Drawing.Size(347, 30);
             this.label8.TabIndex = 9;
             this.label8.Text = "Номинальное давление (кгс/см^2)";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(381, 549);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(381, 542);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 15);
+            this.label9.Size = new System.Drawing.Size(204, 30);
             this.label9.TabIndex = 9;
             this.label9.Text = "Температура (°С) от";
             // 
             // tbPress
             // 
-            this.tbPress.Location = new System.Drawing.Point(607, 486);
+            this.tbPress.Location = new System.Drawing.Point(734, 498);
             this.tbPress.Name = "tbPress";
             this.tbPress.Size = new System.Drawing.Size(71, 23);
             this.tbPress.TabIndex = 13;
@@ -267,7 +270,7 @@ namespace FlangeConnection
             // 
             // tbFromDegrees
             // 
-            this.tbFromDegrees.Location = new System.Drawing.Point(502, 539);
+            this.tbFromDegrees.Location = new System.Drawing.Point(591, 549);
             this.tbFromDegrees.Name = "tbFromDegrees";
             this.tbFromDegrees.Size = new System.Drawing.Size(71, 23);
             this.tbFromDegrees.TabIndex = 14;
@@ -276,16 +279,16 @@ namespace FlangeConnection
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(581, 549);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(684, 542);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 15);
+            this.label10.Size = new System.Drawing.Size(36, 30);
             this.label10.TabIndex = 9;
             this.label10.Text = "до";
             // 
             // tbToDegrees
             // 
-            this.tbToDegrees.Location = new System.Drawing.Point(607, 539);
+            this.tbToDegrees.Location = new System.Drawing.Point(734, 549);
             this.tbToDegrees.Name = "tbToDegrees";
             this.tbToDegrees.Size = new System.Drawing.Size(71, 23);
             this.tbToDegrees.TabIndex = 14;
@@ -300,7 +303,7 @@ namespace FlangeConnection
             this.buReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buReport.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buReport.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buReport.Location = new System.Drawing.Point(916, 486);
+            this.buReport.Location = new System.Drawing.Point(955, 484);
             this.buReport.Margin = new System.Windows.Forms.Padding(0);
             this.buReport.Name = "buReport";
             this.buReport.Size = new System.Drawing.Size(136, 40);

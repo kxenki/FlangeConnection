@@ -354,7 +354,7 @@ namespace FlangeConnection
             this.buHelp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buHelp.FlatAppearance.BorderSize = 0;
             this.buHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buHelp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buHelp.ForeColor = System.Drawing.SystemColors.Control;
             this.buHelp.Image = ((System.Drawing.Image)(resources.GetObject("buHelp.Image")));
             this.buHelp.Location = new System.Drawing.Point(1125, 558);
             this.buHelp.Margin = new System.Windows.Forms.Padding(0);

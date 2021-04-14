@@ -54,6 +54,7 @@ namespace FlangeConnection
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.buExit = new System.Windows.Forms.Button();
             this.buWrap = new System.Windows.Forms.Button();
+            this.buHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox3)).BeginInit();
@@ -346,12 +347,30 @@ namespace FlangeConnection
             this.buWrap.UseVisualStyleBackColor = true;
             this.buWrap.Click += new System.EventHandler(this.buWrap_Click);
             // 
+            // buHelp
+            // 
+            this.buHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buHelp.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buHelp.FlatAppearance.BorderSize = 0;
+            this.buHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buHelp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buHelp.Image = ((System.Drawing.Image)(resources.GetObject("buHelp.Image")));
+            this.buHelp.Location = new System.Drawing.Point(1125, 558);
+            this.buHelp.Margin = new System.Windows.Forms.Padding(0);
+            this.buHelp.Name = "buHelp";
+            this.buHelp.Size = new System.Drawing.Size(36, 40);
+            this.buHelp.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.buHelp, "Здесь будет справочная информация");
+            this.buHelp.UseVisualStyleBackColor = false;
+            // 
             // Fm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1161, 600);
+            this.Controls.Add(this.buHelp);
             this.Controls.Add(this.buWrap);
             this.Controls.Add(this.buExit);
             this.Controls.Add(this.buReport);
@@ -416,6 +435,7 @@ namespace FlangeConnection
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button buExit;
         private System.Windows.Forms.Button buWrap;
+        private System.Windows.Forms.Button buHelp;
     }
 }
 
